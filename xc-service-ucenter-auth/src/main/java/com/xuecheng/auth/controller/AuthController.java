@@ -113,7 +113,7 @@ public class AuthController implements AuthControllerApi {
         AuthToken userToken = authService.getUserToken(uid);
         if(userToken!=null){
             //将jwt令牌返回给用户
-            String jwt_token = userToken.getJwt_token();
+            String jwt_token = userToken.getJwt_token( );
             return new JwtResult(CommonCode.SUCCESS,jwt_token);
         }
         return null;
